@@ -9,8 +9,11 @@
 #   end
 require 'faker'
 
+
 12.times do
-  SolarSystem.create(name: Faker::Space.planet)
+  name = Faker::Space.star
+  SolarSystem.find_or_create_by(name: name)
 end
 
 puts 'ok'
+
