@@ -1,4 +1,12 @@
 Rails.application.routes.draw do
+  get 'bookings/index'
+  get 'bookings/show'
+  get 'bookings/new'
+  get 'bookings/create'
+  get 'bookings/destroy'
+  get 'bookings/delete'
+  get 'planets/index'
+  get 'planets/show'
   root to: "pages#home"
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
