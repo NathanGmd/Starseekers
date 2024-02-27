@@ -9,6 +9,7 @@
 #   end
 require 'json'
 require 'open-uri'
+require 'faker'
 
 Categorie.create(name: "Coup de Coeur")
 Categorie.create(name: "Rocky")
@@ -29,7 +30,13 @@ x = 1
     planet = Planet.new(
       name: content["name"]
       )
-
   end
   x += 1
 end
+
+12.times do
+  name = Faker::Space.star
+  SolarSystem.find_or_create_by(name: name)
+end
+
+puts 'ok'
