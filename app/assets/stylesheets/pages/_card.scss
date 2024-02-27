@@ -11,12 +11,19 @@
   color: white;
   font-weight: bolder;
   text-shadow: 0 0 10px rgba(0,0,0,0.7);
+  margin: 20px;
+  border-radius: 25px;
+  background: linear-gradient(to bottom, #ccc, #fff);
+}
+
+.card:hover {
+  border: 2px solid transparent;
+  box-shadow: 0 0 10px 1px white;
 }
 
 .cards-container {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  gap: 15px;
+  grid-template-columns: 1fr 1fr 1fr;
 }
 
 .img {

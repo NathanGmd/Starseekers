@@ -16,14 +16,14 @@ SolarSystem.destroy_all
 Planet.destroy_all
 User.destroy_all
 
-Category.create(name: "Coup de Coeur")
+# Category.create(name: "Coup de Coeur")
 Category.create(name: "Arid")
 Category.create(name: "Artic")
 Category.create(name: "Tropical")
 Category.create(name: "Temperate")
 Category.create(name: "Rocky")
 Category.create(name: "Humid")
-Category.create(name: "Murker")
+Category.create(name: "Murky")
 
 12.times do
   name = Faker::Space.star
