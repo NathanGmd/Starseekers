@@ -4,7 +4,7 @@ class CreatePlanets < ActiveRecord::Migration[7.1]
       t.string :name
       t.text :content
       t.float :price_per_day
-      t.references :users, null: false, foreign_key: true
+      t.references :user, null: false, foreign_key: true
       t.references :category, null: false, foreign_key: true
       t.references :solar_system, null: false, foreign_key: true
 

@@ -1,3 +1,35 @@
+<div class="container">
+  <div class="header">
+    <h1>Planets#index</h1>
+    <div class="dropdown">
+      <button class="btn btn-primary dropdown-toggle w-50 rounded-2" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
+        Dropdown link
+      </button>
+      <ul class="dropdown-menu w-50" aria-labelledby="dropdownMenuButton">
+        <% @solar_systems.each do |solar_system| %>
+          <li><%= solar_system.name %></li>
+        <% end %>
+      </ul>
+    </div>
+  </div>
+  <div class="navbar-left"></div>
+  <div class="cards-container p-3">
+    <%# <template id="planetcard"> %>
+    <% @planets.each do |planet| %>
+      <div class="card">
+        <div><%= image_tag("pending.jpg",class: "img") %></div>
+        <div class="text">
+          <h1><%= planet.name %></h1>
+          <p>content</p>
+        </div>
+      </div>
+    <% end %>
+    <%# </template> %>
+  </div>
+</div>
+
+<p>Find me in app/views/planets/index.html.erb</p>
+
 <%= render partial: 'layouts/navbar' %>
 <div class="dropdown text-center mt-5">
   <button class="btn btn-primary dropdown-toggle w-50 rounded-2" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">

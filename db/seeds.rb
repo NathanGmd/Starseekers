@@ -7,13 +7,50 @@
 #   ["Action", "Comedy", "Drama", "Horror"].each do |genre_name|
 #     MovieGenre.find_or_create_by!(name: genre_name)
 #   end
+require 'json'
+require 'open-uri'
 require 'faker'
 
+Category.destroy_all
+SolarSystem.destroy_all
+Planet.destroy_all
+User.destroy_all
+
+Category.create(name: "Coup de Coeur")
+Category.create(name: "Arid")
+Category.create(name: "Artic")
+Category.create(name: "Tropical")
+Category.create(name: "Temperate")
+Category.create(name: "Rocky")
+Category.create(name: "Humid")
+Category.create(name: "Murker")
 
 12.times do
   name = Faker::Space.star
   SolarSystem.find_or_create_by(name: name)
 end
 
-puts 'ok'
+newuser = User.new(
+  email: "newmail@gmail.com",
+  password: "password"
+)
+newuser.save
 
+x = 1
+6.times do
+  url = "https://swapi.dev/api/planets/?page=#{x}"
+  list_serialized = URI.open(url).read
+  list = JSON.parse(list_serialized)
+  planets = list["results"]
+  planets.each do |content|
+    planet = Planet.new(
+      name: content["name"],
+      category: Category.all.sample,
+      solar_system: SolarSystem.all.sample,
+      user: User.first
+    )
+    planet.save!
+  end
+  x += 1
+end
+puts 'ok'
