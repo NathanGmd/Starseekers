@@ -7,3 +7,29 @@
 #   ["Action", "Comedy", "Drama", "Horror"].each do |genre_name|
 #     MovieGenre.find_or_create_by!(name: genre_name)
 #   end
+require 'json'
+require 'open-uri'
+
+Categorie.create(name: "Coup de Coeur")
+Categorie.create(name: "Rocky")
+Categorie.create(name: "Temperate")
+Categorie.create(name: "Arid")
+Categorie.create(name: "Artic")
+Categorie.create(name: "Tropical")
+Categorie.create(name: "Humid")
+Categorie.create(name: "Murker")
+
+x = 1
+6.times do
+  url = "https://swapi.dev/api/planets/?page=#{x}"
+  list_serialized = URI.open(url).read
+  list = JSON.parse(list_serialized)
+  planets = list["results"]
+  planets.each do |content|
+    planet = Planet.new(
+      name: content["name"]
+      )
+
+  end
+  x += 1
+end
