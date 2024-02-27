@@ -15,13 +15,15 @@
   <div class="navbar-left"></div>
   <div class="cards-container p-3">
     <%# <template id="planetcard"> %>
+    <% @planets.each do |planet| %>
       <div class="card">
         <div><%= image_tag("pending.jpg",class: "img") %></div>
         <div class="text">
-          <h1>name</h1>
+          <h1><%= planet.name %></h1>
           <p>content</p>
         </div>
       </div>
+    <% end %>
     <%# </template> %>
   </div>
 </div>
