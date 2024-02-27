@@ -11,14 +11,30 @@ require 'json'
 require 'open-uri'
 require 'faker'
 
-Categorie.create(name: "Coup de Coeur")
-Categorie.create(name: "Rocky")
-Categorie.create(name: "Temperate")
-Categorie.create(name: "Arid")
-Categorie.create(name: "Artic")
-Categorie.create(name: "Tropical")
-Categorie.create(name: "Humid")
-Categorie.create(name: "Murker")
+Category.destroy_all
+SolarSystem.destroy_all
+Planet.destroy_all
+User.destroy_all
+
+Category.create(name: "Coup de Coeur")
+Category.create(name: "Arid")
+Category.create(name: "Artic")
+Category.create(name: "Tropical")
+Category.create(name: "Temperate")
+Category.create(name: "Rocky")
+Category.create(name: "Humid")
+Category.create(name: "Murker")
+
+12.times do
+  name = Faker::Space.star
+  SolarSystem.find_or_create_by(name: name)
+end
+
+newuser = User.new(
+  email: "newmail@gmail.com",
+  password: "password"
+)
+newuser.save
 
 x = 1
 6.times do
@@ -28,15 +44,13 @@ x = 1
   planets = list["results"]
   planets.each do |content|
     planet = Planet.new(
-      name: content["name"]
-      )
+      name: content["name"],
+      category: Category.all.sample,
+      solar_system: SolarSystem.all.sample,
+      user: User.first
+    )
+    planet.save!
   end
   x += 1
 end
-
-12.times do
-  name = Faker::Space.star
-  SolarSystem.find_or_create_by(name: name)
-end
-
 puts 'ok'
