@@ -1,0 +1,63 @@
+<header class="navbar">
+  <div class="navbar-container">
+    <a href="/" class="navbar-brand">StarSeekers</a>
+    <nav class="navbar-links">
+      <ul>
+        <li><a href="/categories">Categories</a></li>
+        <li><a href="/events">Events</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<style>
+  .navbar {
+    background-color: #f8f9fa;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding: 1rem;
+    z-index: 1000;
+  }
+
+  .navbar-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+  }
+
+  .navbar-brand {
+    font-size: 1.5rem;
+    color: #212529;
+    text-decoration: none;
+  }
+
+  .navbar-links ul {
+    display: flex;
+    align-items: center;
+    list-style-type: none;
+    padding: 0;
+    height: 100%;
+  }
+
+  .navbar-links li {
+    margin-left: 1rem;
+    height: 100%;
+    display: flex;
+    align-items: center;
+  }
+
+  .navbar-links a {
+    color: #212529;
+    text-decoration: none;
+    height: 100%;
+    display: flex;
+    align-items: center;
+  }
+
+  .navbar-links a:hover {
+    color: #007bff;
+  }
+</style>
