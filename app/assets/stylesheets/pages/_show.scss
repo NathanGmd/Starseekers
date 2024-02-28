@@ -1,61 +1,82 @@
-.body1 {
-  background-image: url('astro.jpg');
-  background-size: cover;
-  background-position: center center;
-  background-repeat: no-repeat;
-}
-
-.container {
-  position: relative;
-  width: 100%;
+.global-show-planet {
   height: 100vh;
+  width: 100%;
+  background-image: url("piliers.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  margin: 0;
+  padding: 0;
+  color: white;
 }
 
-.left-div {
-  position: absolute;
-  top: 100px;
-  left: 0px;
-  width: 30%;
-  height: 75%;
-  background-color: #000;
-  color: #fff;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  border-radius: 10px;
-  box-shadow: inset 0 0 20px rgba(255, 255, 255, 0.2);
+.header-show-planet {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  height: 20%;
+  width: 100%;
+  padding: 5px;
+  border-bottom: 1px solid white;
+  border-width: 80%;
 }
 
-.center-div {
-  position: absolute;
-  top: 100px;
-  left: calc(50% - 15%);
-  width: 30%;
-  height: 75%;
-  background-color: #000;
-  color: #fff;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  border-radius: 10px;
-  box-shadow: inset 0 0 20px rgba(255, 255, 255, 0.2);
+.title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: bold;
 }
 
-.booking-button {
-  position: absolute;
-  bottom: 70px;
-  right: 70px;
-  background-color: #02152a;
-  color: #fff;
-  border: none;
-  border-radius: 5px;
-  padding: 19px 50px;
-  font-size: 24px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
+.body-show-planet {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  height: 60%;
+  width: 100%;
+  padding: 5px;
+  align-items: center;
 }
 
-.left-div:hover, .center-div:hover {
-  transform: scale(1.20);
-  box-shadow: 0 0 40px 10px rgba(255, 255, 255, 0.5);
+.card-show-planet {
+  background-size: cover;
+  background-position: center;
+  height: 100%;
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+  align-items: baseline;
+  justify-content: space-around;
+  font-size: 15px;
+  color: white;
+  margin: 20px;
+  border-radius: 25px;
+  background: black;
+  border: 2px solid white;
+  overflow: hidden;
 }
 
-.booking-button:hover {
-  background-color: #0056b3;
+.footer-show-planet {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  height: 20%;
+  width: 100%;
+  padding: 5px;
 }
+
+#but2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.book-button {
+    background-color: #000000;
+    color: #fff;
+    padding: 10px 20px;
+    font-size: 16px;
+    height: 80px;
+    width: 180px;
+    border: none;
+    border-radius: 4px;
+  }
+
+.book-button:hover {
+    background-color: #4398b5;
+  }
