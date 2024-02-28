@@ -16,7 +16,7 @@ SolarSystem.destroy_all
 Planet.destroy_all
 User.destroy_all
 
-# Category.create(name: "Coup de Coeur")
+Category.create(name: "Coup de Coeur")
 Category.create(name: "Arid")
 Category.create(name: "Artic")
 Category.create(name: "Tropical")
@@ -47,7 +47,8 @@ x = 1
       name: content["name"],
       category: Category.all.sample,
       solar_system: SolarSystem.all.sample,
-      user: User.first
+      user: User.first,
+      content: Faker::Lorem.paragraphs
     )
     planet.save!
   end

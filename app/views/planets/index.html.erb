@@ -23,11 +23,11 @@
       <%= link_to planet_path(planet) do %>
       <div class="card">
         <div>
-        <%= image_tag("temperate.jpg",class: "img") %>
+        <%= image_tag(["temperate","murky","arid","artic","humid","rocky","tropical"].sample,class: "img") %>
         </div>
         <div class="text">
           <h1><%= planet.name %></h1>
-          <p><%= planet.category.name %></p>
+          <p><%= planet.content %></p>
         </div>
       </div>
       <% end %>
