@@ -36,14 +36,14 @@ ActiveRecord::Schema[7.1].define(version: 2024_02_26_151447) do
     t.string "name"
     t.text "content"
     t.float "price_per_day"
-    t.bigint "user_id", null: false
+    t.bigint "users_id", null: false
     t.bigint "category_id", null: false
     t.bigint "solar_system_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["category_id"], name: "index_planets_on_category_id"
     t.index ["solar_system_id"], name: "index_planets_on_solar_system_id"
-    t.index ["user_id"], name: "index_planets_on_user_id"
+    t.index ["users_id"], name: "index_planets_on_users_id"
   end
 
   create_table "solar_systems", force: :cascade do |t|
@@ -55,6 +55,8 @@ ActiveRecord::Schema[7.1].define(version: 2024_02_26_151447) do
   create_table "users", force: :cascade do |t|
     t.string "email", default: "", null: false
     t.string "encrypted_password", default: "", null: false
+    t.string "first_name", null: false
+    t.string "last_name", null: false
     t.string "reset_password_token"
     t.datetime "reset_password_sent_at"
     t.datetime "remember_created_at"
@@ -68,5 +70,5 @@ ActiveRecord::Schema[7.1].define(version: 2024_02_26_151447) do
   add_foreign_key "bookings", "users"
   add_foreign_key "planets", "categories"
   add_foreign_key "planets", "solar_systems"
-  add_foreign_key "planets", "users"
+  add_foreign_key "planets", "users", column: "users_id"
 end
