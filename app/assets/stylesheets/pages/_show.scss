@@ -1,5 +1,4 @@
-
-body {
+.body1 {
   background-image: url('astro.jpg');
   background-size: cover;
   background-position: center center;
@@ -14,11 +13,28 @@ body {
 
 .left-div {
   position: absolute;
-  top: 10px;
-  left: 0;
-  width: 50%;
+  top: 100px;
+  left: 0px;
+  width: 30%;
   height: 75%;
-  background-color: #ccc;
+  background-color: #000;
+  color: #fff;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border-radius: 10px;
+  box-shadow: inset 0 0 20px rgba(255, 255, 255, 0.2);
+}
+
+.center-div {
+  position: absolute;
+  top: 100px;
+  left: calc(50% - 15%);
+  width: 30%;
+  height: 75%;
+  background-color: #000;
+  color: #fff;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border-radius: 10px;
+  box-shadow: inset 0 0 20px rgba(255, 255, 255, 0.2);
 }
 
 .booking-button {
@@ -33,6 +49,11 @@ body {
   font-size: 24px;
   cursor: pointer;
   transition: background-color 0.3s ease;
+}
+
+.left-div:hover, .center-div:hover {
+  transform: scale(1.20);
+  box-shadow: 0 0 40px 10px rgba(255, 255, 255, 0.5);
 }
 
 .booking-button:hover {

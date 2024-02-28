@@ -1,6 +1,16 @@
 <div class="body1">
   <div class="container">
-    <div class="left-div"></div>
+    <div class="left-div">
+      <h1><%= @planet.name %></h1>
+      <% if @planet.content.present? %>
+        <% JSON.parse(@planet.content).each do |content_item| %>
+          <p><%= content_item %></p>
+        <% end %>
+      <% end %>
+      <p>Daily Price: <%= number_to_currency(rand(100000..200000)) %></p>
+    </div>
+    <div class="center-div">
+    </div>
     <%= link_to new_planet_booking_path(@planet) do %>
       <button class="booking-button">Booking</button>
     <% end %>
