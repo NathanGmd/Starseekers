@@ -11,16 +11,26 @@
   color: white;
   font-weight: bolder;
   text-shadow: 0 0 10px rgba(0,0,0,0.7);
+  margin: 20px;
+  border-radius: 25px;
+  background: linear-gradient(to bottom, #555555, #cdaa7d);
+  border: 2px opacify($color: #000000, $amount: 0);
+}
+
+.card:hover {
+  border: 2px solid transparent;
+  box-shadow: 0 0 10px 1px white;
 }
 
 .cards-container {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  gap: 15px;
+  grid-template-columns: 1fr 1fr 1fr;
 }
 
 .img {
   display: flex;
   height: 200px;
   width: 100%;
+  border-radius: 10px;
+  box-shadow: 10px;
 }

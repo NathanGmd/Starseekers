@@ -1,13 +1,5 @@
 Rails.application.routes.draw do
   devise_for :users
-  get 'bookings/index'
-  get 'bookings/show'
-  get 'bookings/new'
-  get 'bookings/create'
-  get 'bookings/destroy'
-  get 'bookings/delete'
-  get 'planets/index'
-  get 'planets/show'
   root to: "planets#index"
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
