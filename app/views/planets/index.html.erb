@@ -1,4 +1,4 @@
-<%= render partial: 'layouts/navbar' %>
+
 <div class="global">
   <div class="container-left">
     <div class="navbar-left"></div>
@@ -6,16 +6,7 @@
   <div class="container-right">
     <div class="header">
     <h1>Planets#index</h1>
-    <div class="dropdown">
-      <button class="btn btn-primary dropdown-toggle w-50 rounded-2" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
-        Dropdown link
-      </button>
-      <ul class="dropdown-menu w-50" aria-labelledby="dropdownMenuButton">
-        <% @solar_systems.each do |solar_system| %>
-          <li><%= solar_system.name %></li>
-        <% end %>
-      </ul>
-    </div>
+  
     </div>
     <div class="cards-container p-3">
     <%# <template id="planetcard"> %>
@@ -27,7 +18,6 @@
         </div>
         <div class="text">
           <h1><%= planet.name %></h1>
-          <p><%= planet.content %></p>
         </div>
       </div>
       <% end %>
