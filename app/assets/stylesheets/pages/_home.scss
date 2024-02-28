@@ -1,7 +1,9 @@
 // Specific CSS for your home-page
 .header {
-  align-items: center;
-  justify-content: space-around;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  color: white;
+  height: 100px;
 }
 
 .global {
@@ -20,4 +22,18 @@
 
 .container-right {
   width: 100%;
+}
+
+.search {
+  display: flex;
+  align-items: center;
+}
+
+.searchbar {
+  border-radius: 25px;
+  height: 40px;
+  background-color: black;
+  color: white;
+  width: 100%;
+  border: 2px solid white;
 }

@@ -3,25 +3,28 @@
   <div class="container-left">
     <div class="navbar-left">
       <div class="sidebar">
-        <div class="nav-link">Catégorie 1</div>
-        <div class="nav-link">Catégorie 2</div>
-        <div class="nav-link">Catégorie 3</div>
-        <div class="nav-link">Catégorie 4</div>
-        <div class="nav-link">Catégorie 5</div>
-        <div class="nav-link">Catégorie 6</div>
-        <div class="nav-link">Catégorie 7</div>
-        <div class="nav-link">Catégorie 8</div>
+        <% @categories.each do |category| %>
+          <%= link_to planets_path(category: category.name) do %>
+            <div class="nav-link"><%= category.name %></div>
+          <% end %>
+        <% end %>
       </div>
     </div>
   </div>
   <div class="container-right">
     <div class="header">
+      <div><%= params[:category] %></div>
+      <div class="search">
+        <input type="text" id="search-name" class="searchbar" placeholder="Solar systems...">
+        <%# <input type="submit" value="Search"> %>
+      </div>
+      <div class="list-system"></div>
     </div>
     <div class="cards-container p-3">
     <% @planets.each do |planet| %>
       <%= link_to planet_path(planet) do %>
       <div class="card">
-        <div>
+        <div class="img-container">
         <%= image_tag(["temperate","murky","arid","artic","humid","rocky","tropical"].sample,class: "img") %>
         </div>
         <div class="text">
