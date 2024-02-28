@@ -9,3 +9,22 @@ eagerLoadControllersFrom("controllers", application)
 // Lazy load controllers as they appear in the DOM (remember not to preload controllers in import map!)
 // import { lazyLoadControllersFrom } from "@hotwired/stimulus-loading"
 // lazyLoadControllersFrom("controllers", application)
+
+document.addEventListener('DOMContentLoaded', function() {
+
+    const navLinks = document.querySelectorAll('.nav-link');
+  
+  
+    navLinks.forEach(link => {
+      link.addEventListener('click', function(event) {
+  
+        event.preventDefault();
+  
+  
+        navLinks.forEach(l => l.classList.remove('active'));
+  
+        
+        this.classList.add('active');
+      });
+    });
+  });

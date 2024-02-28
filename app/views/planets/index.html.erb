@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <div class="global">
   <div class="container-left">
@@ -18,11 +19,41 @@
         <div class="text">
           <h1><%= planet.name %></h1>
           <p><%= planet.content %></p>
-        </div>
+<div class="main-container">
+  <div class="sidebar">
+    <div class="nav-link">Catégorie 1</div>
+    <div class="nav-link">Catégorie 2</div>
+    <div class="nav-link">Catégorie 3</div>
+    <div class="nav-link">Catégorie 4</div>
+    <div class="nav-link">Catégorie 5</div>
+    <div class="nav-link">Catégorie 6</div>
+    <div class="nav-link">Catégorie 7</div>
+    <div class="nav-link">Catégorie 8</div>
+  </div>
+  <div class="global">
+    <div class="container-left">
+      <div class="navbar-left"></div>
+    </div>
+    <div class="container-right">
+      <div class="header">
+        <h1>Planets#index</h1>
       </div>
-      <% end %>
-    <% end %>
-    <%# </template> %>
+      <div class="cards-container p-3">
+        <%# <template id="planetcard"> %>
+        <% @planets.each do |planet| %>
+          <%= link_to planet_path(planet) do %>
+          <div class="card">
+            <div>
+              <%= image_tag(["temperate","murky","arid","artic","humid","rocky","tropical"].sample,class: "img") %>
+            </div>
+            <div class="text">
+              <h1><%= planet.name %></h1>
+            </div>
+          </div>
+          <% end %>
+        <% end %>
+        <%# </template> %>
+      </div>
     </div>
   </div>
 </div>
