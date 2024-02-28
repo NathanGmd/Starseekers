@@ -1,0 +1,40 @@
+
+body {
+  background-image: url('astro.jpg');
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+.container {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+}
+
+.left-div {
+  position: absolute;
+  top: 10px;
+  left: 0;
+  width: 50%;
+  height: 75%;
+  background-color: #ccc;
+}
+
+.booking-button {
+  position: absolute;
+  bottom: 70px;
+  right: 70px;
+  background-color: #02152a;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 19px 50px;
+  font-size: 24px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.booking-button:hover {
+  background-color: #0056b3;
+}
