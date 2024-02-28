@@ -1,18 +1,24 @@
-<div class="body1">
-  <div class="container">
-    <div class="left-div">
-      <h1><%= @planet.name %></h1>
-      <% if @planet.content.present? %>
-        <% JSON.parse(@planet.content).each do |content_item| %>
-          <p><%= content_item %></p>
-        <% end %>
+<div class="global-show-planet">
+  <div class="header-show-planet">
+    <h1 class="title"><%= @planet.name %></h1>
+  </div>
+  <div class="body-show-planet">
+    <div class="card-show-planet">
+      <h1>Description</h1>
+      <p>Lorem ipsum</p>
+    </div>
+    <div class="card-show-planet">
+      <h1>Caractéristiques</h1>
+      <p>Lorem ipsum</p>
+    </div>
+  </div>
+  <div class="footer-show-planet">
+    <div></div>
+    <div></div>
+    <div id="but2">
+      <%= link_to new_planet_booking_path(@planet) do %>
+        <button class="book-button">Booking</button>
       <% end %>
-      <p>Daily Price: <%= number_to_currency(rand(100000..200000)) %></p>
     </div>
-    <div class="center-div">
-    </div>
-    <%= link_to new_planet_booking_path(@planet) do %>
-      <button class="booking-button">Booking</button>
-    <% end %>
   </div>
 </div>

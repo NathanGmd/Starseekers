@@ -1,4 +1,6 @@
 class PlanetsController < ApplicationController
+  skip_before_action :authenticate_user!, only: %i[index show]
+
   def index
     @solar_systems = SolarSystem.all
     if params[:category]
@@ -11,7 +13,6 @@ class PlanetsController < ApplicationController
 
   def show
     @planet = Planet.find(params[:id])
-    # raise
   end
 
   private
