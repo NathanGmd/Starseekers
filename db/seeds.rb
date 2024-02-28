@@ -23,7 +23,7 @@ Category.create(name: "Tropical")
 Category.create(name: "Temperate")
 Category.create(name: "Rocky")
 Category.create(name: "Humid")
-Category.create(name: "Murker")
+Category.create(name: "Murky")
 
 12.times do
   name = Faker::Space.star
@@ -47,7 +47,8 @@ x = 1
       name: content["name"],
       category: Category.all.sample,
       solar_system: SolarSystem.all.sample,
-      user: User.first
+      user: User.first,
+      content: Faker::Lorem.paragraphs
     )
     planet.save!
   end

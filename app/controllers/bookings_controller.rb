@@ -15,7 +15,7 @@ class BookingsController < ApplicationController
   def create
     @booking = Booking.new(booking_params)
     @booking.planet = @planet
-    @booking.user = current_user
+    if @booking.user == current_user
       redirect_to planet_path(@planet), notice: 'Your reservation has been successfully registered.'
     else
       render :new, status: :unprocessable_entity
