@@ -2,12 +2,11 @@ class PlanetsController < ApplicationController
   def index
     @solar_systems = SolarSystem.all
     if params[:category]
-      @planets = Planet.where(category: params[:category])
+      @planets = Planet.where(category: Category.find_by(name: params[:category]))
     else
       @planets = Planet.where(category: Category.find_by(name: "Coup de coeur"))
     end
     @categories = Category.all
-    @planets = Planet.all
   end
 
   def show

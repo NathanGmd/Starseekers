@@ -4,14 +4,16 @@
     <div class="navbar-left">
       <div class="sidebar">
         <% @categories.each do |category| %>
-          <div class="nav-link" data-controller="category" data-category-target="categoryName"><%= category.name %></div>
+          <%= link_to planets_path(category: category.name) do %>
+            <div class="nav-link"><%= category.name %></div>
+          <% end %>
         <% end %>
       </div>
     </div>
   </div>
   <div class="container-right">
     <div class="header">
-      <div></div>
+      <div><%= params[:category] %></div>
       <div class="search">
         <input type="text" id="search-name" class="searchbar" placeholder="Solar systems...">
         <%# <input type="submit" value="Search"> %>
@@ -27,7 +29,6 @@
         </div>
         <div class="text">
           <h1><%= planet.name %></h1>
-          <p><%= planet.content %></p>
         </div>
       </div>
       <% end %>

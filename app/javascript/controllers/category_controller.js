@@ -7,5 +7,6 @@ export default class extends Controller {
   connect() {
     console.log("hello form category controller")
     console.log(this.categoryNameTarget.textContent);
+    console.log(this)
   }
 }
