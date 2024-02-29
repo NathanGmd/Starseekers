@@ -5,6 +5,8 @@ class PlanetsController < ApplicationController
     @solar_systems = SolarSystem.all
     if params[:category]
       @planets = Planet.where(category: Category.find_by(name: params[:category]))
+    elsif params[:query]
+      @planets = Planet.global_search(params[:query])
     else
       @planets = Planet.where(category: Category.find_by(name: "Coup de coeur"))
     end

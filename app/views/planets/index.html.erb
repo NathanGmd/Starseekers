@@ -13,9 +13,17 @@
   <div class="container-right">
     <div class="header">
       <div><%= params[:category] %></div>
-      <div class="search">
-        <input type="text" id="search-name" class="searchbar" placeholder="Solar systems...">
-        <%# <input type="submit" value="Search"> %>
+      <div class="search1">
+            <div class="">
+              <%= form_with url: planets_path, method: :get, class: "" do %>
+                <%= text_field_tag :query,
+                      params[:query],
+                      class: "searchbar w-4",
+                      placeholder: "Solar systems...."
+                  %>
+                <%# <%= submit_tag "Search", name: "", class: "searchbar" %>
+              <% end %>
+          </div>
       </div>
       <div class="list-system"></div>
     </div>
