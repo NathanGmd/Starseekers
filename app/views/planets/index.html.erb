@@ -17,6 +17,9 @@
         <input type="text" id="search-name" class="searchbar" placeholder="Solar systems...">
         <%# <input type="submit" value="Search"> %>
       </div>
+        <%= link_to new_planet_path do %>
+          <button id="thebutton">Create</button>
+        <% end %>
       <div class="list-system"></div>
     </div>
     <div class="cards-container p-3">

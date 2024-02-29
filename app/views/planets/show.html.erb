@@ -1,24 +1,8 @@
-<div class="global-show-planet">
-  <div class="header-show-planet">
-    <h1 class="title"><%= @planet.name %></h1>
-  </div>
-  <div class="body-show-planet">
-    <div class="card-show-planet">
-      <h1>Description</h1>
-      <p>Lorem ipsum</p>
-    </div>
-    <div class="card-show-planet">
-      <h1>Caractéristiques</h1>
-      <p>Lorem ipsum</p>
-    </div>
-  </div>
-  <div class="footer-show-planet">
-    <div></div>
-    <div></div>
-    <div id="but2">
-      <%= link_to new_planet_booking_path(@planet) do %>
-        <button class="book-button">Booking</button>
-      <% end %>
-    </div>
+<div class="body1">
+  <div class="container">
+    <div class="left-div"></div>
+    <%= link_to new_planet_booking_path(@planet) do %>
+      <button class="booking-button">Booking</button>
+    <% end %>
   </div>
 </div>
