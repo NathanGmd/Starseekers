@@ -1,2 +1,29 @@
-<h1>Bookings#index</h1>
-<p>Find me in app/views/bookings/index.html.erb</p>
+
+  <div class="presentation">
+   <h1>Booking title</h1>
+    <div class="content">
+      <h1 class="title">My Bookings</h1>
+      <ul class="bookings">
+        <% @bookings.each do |booking| %>
+          <li class="booking" data-booking-id="<%= booking.id %>">
+            <div class="booking-details">
+              <span class="booking-id"><%= booking.id %></span>
+              <span class="booking-title">Email:</span>
+              <span class="booking-user"> <strong><%= booking.user.email %></strong></span>
+              <span class="booking-title">Start Date:</span>
+              <span class="booking-start-date"><%= booking.start_date.present? ? booking.start_date.strftime('%Y-%m-%d') : '' %></span>
+              <span class="booking-title">End Date:</span>
+              <span class="booking-end-date"><%= booking.end_date.present? ? booking.end_date.strftime('%Y-%m-%d') : '' %></span>
+              <span class="booking-title">Planet:</span>
+              <span class="booking-planet"><%= booking.planet.name %></span>
+            </div>
+            <div class="actions">
+              <%= button_to booking_path(booking), method: :delete, data: { turbo_method: :delete } do %>
+                Delete
+              <% end %>
+            </div>
+          </li>
+        <% end %>
+      </ul>
+    </div>
+  </div>
