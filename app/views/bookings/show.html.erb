@@ -6,7 +6,7 @@
     <p>reservation date : </p>
     <p>From : <%= @booking.start_date %></p>
     <p>To : <%= @booking.end_date %></p>
-    <p>Prix : price</p>
+    <p>Prix : <%= @booking.total_price %> €</p>
     <%= link_to planets_path do %>
     <button class="butt-recap">Back to Planets</button>
     <% end %>
