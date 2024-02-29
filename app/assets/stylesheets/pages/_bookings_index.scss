@@ -1,0 +1,91 @@
+body {
+  background-color: black;
+}
+
+.presentation {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100%;
+}
+
+.content {
+  background-color: white;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+}
+
+.bookings {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.booking {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+  border-bottom: 1px solid black;
+  cursor: pointer;
+}
+
+.booking:last-child {
+  border-bottom: none;
+}
+
+.booking-details {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.booking-id {
+  font-weight: bold;
+  font-size: 1.2em;
+}
+
+.booking-title {
+  margin-top: 5px;
+  font-weight: bold;
+}
+
+.booking-start-date,
+.booking-end-date {
+  margin-top: 5px;
+}
+
+.booking-planet {
+  margin-top: 10px;
+}
+
+.booking-user {
+  margin-top: 5px;
+  font-size: 0.8em;
+  color: gray;
+}
+
+.actions {
+  display: none;
+  margin-left: 20px;
+}
+
+.booking:hover .actions {
+  display: block;
+}
+
+.actions a {
+  color: black;
+  text-decoration: none;
+  margin-right: 5px;
+}
+
+.actions a:last-child {
+  margin-right: 0;
+}
+
+.presentation {
+  background-color: black;
+}
