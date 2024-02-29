@@ -7,6 +7,7 @@
         <%= f.input :solar_system_id, as: :select, collection: SolarSystem.all %>
         <%= f.input :content %>
         <%= f.input :price_per_day, input_html: { min: 9999, value: 1000000 } %>
+        <%= f.hidden_field :image, value: "arid.jpg" %>
         <%= f.button :submit, "Create", class: "btn btn-primary" %>
       <% end %>
     </div>

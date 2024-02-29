@@ -4,49 +4,62 @@
   background-size: cover;
   color: yellow;
 }
+.apaevent {
+  text-align: left; /* Alignement du texte à gauche */
+  margin-left: 40px;
+  font-size: 50px;
+}
 
 .main-containerevent {
-  width: 80%; /* Largeur de la div principale */
-  margin: auto; /* Centrer la div principale */ /* Bordure inférieure en jaune */
-  padding: 20px 0; /* Padding en haut et en bas */
+  width: 80%;
+  margin: auto;
+  padding: 20px 0;
 }
 
 .headerevent, .footer {
-  text-align: center; /* Texte centré dans l'entête et le pied de page */
+  text-align: center;
   border-top: 1px solid yellow;
-  padding: 10px 0; /* Padding en haut et en bas pour l'entête et le pied de page */
+  padding: 10px 0;
 }
 
 .contentevent {
-  display: flex; /* Utilisez flexbox pour aligner les éléments latéralement */
-  justify-content: space-around; /* Espacement autour des éléments */
-  padding: 20px 0; /* Padding en haut et en bas pour le contenu */
-}
-
-.cardeventleft {
-  width: 60%;
-  border: 1px solid yellow; /* Bordure des cartes en jaune */
-  padding: 20px; /* Padding autour du contenu de la carte */
-  margin: 15px;
+  display: flex;
+  justify-content: space-around;
+  padding: 20px 0;
 }
 
 .cardeventright {
-  width: 40%;
-  border: 1px solid yellow; /* Bordure des cartes en jaune */
+  width: 2  0%;
+  // border: 1px solid yellow;
   padding: 20px;
-  margin: 15px; /* Padding autour du contenu de la carte */
+  margin: 15px;
+}
+
+.cardeventleft {
+  width: 70%;
+  // border: 1px solid yellow;
+  padding: 20px;
+  margin: 15px;
 }
 
 .button-containerevent {
-  display: flex; /* Utilisez flexbox pour le bouton */
-  justify-content: flex-end; /* Aligner le bouton à droite */
-  padding: 20px; /* Padding autour du bouton */
+  display: flex;
+  justify-content: flex-end;
+  padding: 20px;
 }
 
 .buttonevent {
-  background-color: yellow; /* Bouton de fond jaune */
-  color: black; /* Texte du bouton noir */
-  border: none; /* Pas de bordure pour le bouton */
-  padding: 10px 20px; /* Padding autour du texte du bouton */
-  cursor: pointer; /* Curseur de pointeur pour l'apparence cliquable */
+  background-color: yellow;
+  color: black;
+  border: none;
+  padding: 7px 15px;
+  cursor: pointer;
+  font-size: 22px;
+  transition: 0.3s;
+  border-radius: 10px;
+}
+
+.buttonevent:hover {
+  background-color: #ffc107;
+  color: white;
 }

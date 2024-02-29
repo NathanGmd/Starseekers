@@ -18,7 +18,9 @@ class PlanetsController < ApplicationController
   end
 
   def create
-ch    @planet.user = current_user
+    @planet = Planet.new(planet_params)
+    @planet.image ||= 'arid.jpg'
+    @planet.user = current_user
     if @planet.save
       redirect_to planet_path(@planet), notice: 'Your planet has been successfully registered.'
     else
