@@ -7,9 +7,9 @@
     <div class="ms-auto me-auto m-2">
       <div class="navbar-links">
         <ul>
-          <li><a href="/">Categories</a></li>
+          <li><%= link_to "My planets", myplanets_planets_path, class: "dropdown-item" %></li>
           <li class="separator">|</li>
-          <li><a href="/events">Events</a></li>
+          <li><%= link_to "Events", events_planets_path, class: "dropdown-item" %></li>
         </ul>
       </div>
     </div>
@@ -31,6 +31,7 @@
               <%= link_to "My Bookings", bookings_path, class: "dropdown-item" %>
               <%= link_to "My planets", myplanets_planets_path, class: "dropdown-item" %>
               <%= link_to "Log out", destroy_user_session_path, data: {turbo_method: :delete}, class: "dropdown-item" %>
+              <%= link_to "chien", chien_planets_path, class: "dropdown-item" %>
             </div>
           </li>
         </ul>

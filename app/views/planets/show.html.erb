@@ -16,9 +16,11 @@
     <div></div>
     <div></div>
     <div id="but2">
+    <% if @planet.user != current_user %>
       <%= link_to new_planet_booking_path(@planet) do %>
         <button class="book-button">Booking</button>
       <% end %>
+    <% end %>
     </div>
   </div>
 </div>
