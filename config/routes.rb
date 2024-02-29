@@ -9,7 +9,7 @@ Rails.application.routes.draw do
   resources :planets do
     resources :bookings, only: [:new, :create]
   end
-  resources :bookings, only: [:index, :destroy]
+  resources :bookings, only: [:index, :destroy, :show]
   # Defines the root path route ("/")
   # root "posts#index"
 end

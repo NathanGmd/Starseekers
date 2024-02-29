@@ -13,9 +13,17 @@
   <div class="container-right">
     <div class="header">
       <div><%= params[:category] %></div>
-      <div class="search">
-        <input type="text" id="search-name" class="searchbar" placeholder="Solar systems...">
-        <%# <input type="submit" value="Search"> %>
+      <div class="search1">
+            <div class="">
+              <%= form_with url: planets_path, method: :get, class: "" do %>
+                <%= text_field_tag :query,
+                      params[:query],
+                      class: "form-control",
+                      placeholder: "Solar systems...."
+                  %>
+                <%# <%= submit_tag "Search", sname: "", class: "searchbar" %>
+              <% end %>
+          </div>
       </div>
         <%= link_to new_planet_path do %>
           <button id="thebutton">Create</button>
@@ -29,7 +37,7 @@
         <div class="img-container">
         <%= image_tag("temperate",class: "img") %>
         </div>
-        <div class="text">
+        <div class="text-planet">
           <h1><%= planet.name %></h1>
         </div>
       </div>
