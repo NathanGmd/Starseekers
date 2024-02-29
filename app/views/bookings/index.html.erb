@@ -1,8 +1,10 @@
-
-  <div class="presentation">
-   <h1>Booking title</h1>
-    <div class="content">
+  <h1>Booking title</h1>
+<div class="presentation">
+  <div class="content">
+    <div class="centered">
       <h1 class="title">My Bookings</h1>
+    </div>
+    <div class="scrollable-content">
       <ul class="bookings">
         <% @bookings.each do |booking| %>
           <li class="booking" data-booking-id="<%= booking.id %>">
@@ -27,3 +29,4 @@
       </ul>
     </div>
   </div>
+</div>

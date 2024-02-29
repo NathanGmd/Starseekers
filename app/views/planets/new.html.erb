@@ -1,14 +1,12 @@
-<div class="container">
-  <div class="row justify-content-center">
-    <div class="col">
-      <%= simple_form_for @planet, html: { class: "w-50" } do |f| %>
-        <%= f.input :name %>
-        <%= f.input :category_id, as: :select, collection: Category.all %>
-        <%= f.input :solar_system_id, as: :select, collection: SolarSystem.all %>
-        <%= f.input :content %>
-        <%= f.input :price_per_day, input_html: { min: 9999, value: 1000000 } %>
-        <%= f.button :submit, "Create", class: "btn btn-primary" %>
-      <% end %>
-    </div>
+<div class="container-fluid bg-image text-white min-vh-100 d-flex align-items-center justify-content-center" style="background-image: url('https://www.geowiki.fr/images/1/17/Ciel_%C3%A9toil%C3%A9.jpg');">
+  <div class="col-6">
+    <%= simple_form_for @planet, html: { class: "w-100" } do |f| %>
+      <%= f.input :name, label: "Planet Name" %>
+      <%= f.input :category_id, as: :select, collection: Category.all, label: "Category" %>
+      <%= f.input :solar_system_id, as: :select, collection: SolarSystem.all, label: "Solar System" %>
+      <%= f.input :content, label: "Content" %>
+      <%= f.input :price_per_day, input_html: { min: 9999, value: 1000000 }, label: "Price per Day" %>
+      <%= f.button :submit, "Create", class: "btn btn-primary btn-block" %>
+    <% end %>
   </div>
 </div>
