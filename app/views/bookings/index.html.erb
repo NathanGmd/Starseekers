@@ -11,9 +11,9 @@
               <span class="booking-title">Email:</span>
               <span class="booking-user"> <strong><%= booking.user.email %></strong></span>
               <span class="booking-title">Start Date:</span>
-              <span class="booking-start-date"><%= booking.start_date.present? ? booking.start_date.strftime('%Y-%m-%d') : '' %></span>
+              <span class="booking-start-date"><%= booking.start_date %></span>
               <span class="booking-title">End Date:</span>
-              <span class="booking-end-date"><%= booking.end_date.present? ? booking.end_date.strftime('%Y-%m-%d') : '' %></span>
+              <span class="booking-end-date"><%= booking.end_date %></span>
               <span class="booking-title">Planet:</span>
               <span class="booking-planet"><%= booking.planet.name %></span>
             </div>

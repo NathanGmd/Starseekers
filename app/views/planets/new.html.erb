@@ -1,0 +1,14 @@
+<div class="container">
+  <div class="row justify-content-center">
+    <div class="col">
+      <%= simple_form_for @planet, html: { class: "w-50" } do |f| %>
+        <%= f.input :name %>
+        <%= f.input :category_id, as: :select, collection: Category.all %>
+        <%= f.input :solar_system_id, as: :select, collection: SolarSystem.all %>
+        <%= f.input :content %>
+        <%= f.input :price_per_day, input_html: { min: 9999, value: 1000000 } %>
+        <%= f.button :submit, "Create", class: "btn btn-primary" %>
+      <% end %>
+    </div>
+  </div>
+</div>

@@ -18,10 +18,10 @@
               <%= form_with url: planets_path, method: :get, class: "" do %>
                 <%= text_field_tag :query,
                       params[:query],
-                      class: "searchbar w-4",
+                      class: "form-control",
                       placeholder: "Solar systems...."
                   %>
-                <%# <%= submit_tag "Search", name: "", class: "searchbar" %>
+                <%# <%= submit_tag "Search", sname: "", class: "searchbar" %>
               <% end %>
           </div>
       </div>
@@ -34,7 +34,7 @@
         <div class="img-container">
         <%= image_tag("temperate",class: "img") %>
         </div>
-        <div class="text">
+        <div class="text-planet">
           <h1><%= planet.name %></h1>
         </div>
       </div>
