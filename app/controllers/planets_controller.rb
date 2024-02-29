@@ -3,13 +3,9 @@ class PlanetsController < ApplicationController
 
   def index
     @solar_systems = SolarSystem.all
-    if params[:category]
-      @planets = Planet.where(category: Category.find_by(name: params[:category]))
-    elsif params[:query]
-      @planets = Planet.global_search(params[:query])
-    else
-      @planets = Planet.where(category: Category.find_by(name: "Coup de coeur"))
-    end
+    @planets = Planet.all
+    @planets = @planets.where(category: Category.find_by(name: params[:category])) if params[:category]
+    @planets = @planets.global_search(params[:query]) if params[:query]
     @categories = Category.all
   end
 
@@ -29,6 +25,10 @@ class PlanetsController < ApplicationController
     else
       render :new, status: :unprocessable_entity
     end
+  end
+
+  def myplanets
+    @myplanetsmine = Planet.where(user: current_user)
   end
 
   private
