@@ -36,6 +36,8 @@ newuser = User.new(
 )
 newuser.save
 
+BACKPLANETS = ["arid.jpg", "artic.jpg", "humid.png", "murky.jpg", "rocky.jpg", "temperate.jpg", "tropical.jpg"]
+
 x = 1
 6.times do
   url = "https://swapi.dev/api/planets/?page=#{x}"
@@ -45,10 +47,20 @@ x = 1
   planets.each do |content|
     planet = Planet.new(
       name: content["name"],
+      rotation_period: content["rotation_period"],
+      orbital_period: content["orbital_period"],
+      diameter: content["diameter"],
+      gravity: content["gravity"],
+      terrain: content["terrain"],
+      surface_water: content["surface_water"],
+      population: content["population"],
+      climate: content["climate"],
+      image: BACKPLANETS.sample,
       category: Category.all.sample,
       solar_system: SolarSystem.all.sample,
       user: User.first,
-      content: Faker::Lorem.paragraphs
+      content: Faker::Lorem.paragraph(sentence_count: 30),
+      price_per_day: rand(800..1200)
     )
     planet.save!
   end

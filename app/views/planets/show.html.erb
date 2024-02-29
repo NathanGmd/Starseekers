@@ -1,8 +1,36 @@
-<div class="body1">
-  <div class="container">
-    <div class="left-div"></div>
-    <%= link_to new_planet_booking_path(@planet) do %>
-      <button class="booking-button">Booking</button>
+<div class="global-show-planet">
+  <div class="header-show-planet">
+    <div class="img-container-show" style="background-image: url(<%= image_path(@planet.image) %>);"></div>
+    <div>
+      <h1 class="title"><strong><%= @planet.name %></strong></h1>
+    </div>
+  </div>
+  <div class="body-show-planet">
+    <div class="card-show-planet">
+      <h1>Description</h1>
+      <p><%= @planet.content %></p>
+    </div>
+    <div class="card-show-planet">
+      <h1>Caractéristiques</h1>
+      <p>Rotation period : <%= @planet.rotation_period %></p>
+      <p>Orbital period : <%= @planet.orbital_period %></p>
+      <p>Diameter : <%= @planet.diameter %></p>
+      <p>Gravity : <%= @planet.gravity %></p>
+      <p>Terrain : <%= @planet.terrain %></p>
+      <p>Surface water : <%= @planet.surface_water %></p>
+      <p>Population : <%= @planet.population %></p>
+      <p>Climate : <%= @planet.category.name %></p>
+    </div>
+  </div>
+  <div class="footer-show-planet">
+    <div></div>
+    <div></div>
+    <div id="but2">
+    <% if @planet.user != current_user %>
+      <%= link_to new_planet_booking_path(@planet) do %>
+        <button class="book-button">Booking</button>
+      <% end %>
     <% end %>
+    </div>
   </div>
 </div>

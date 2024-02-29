@@ -18,8 +18,7 @@ class PlanetsController < ApplicationController
   end
 
   def create
-    @planet = Planet.new(planet_params)
-    @planet.user = current_user
+ch    @planet.user = current_user
     if @planet.save
       redirect_to planet_path(@planet), notice: 'Your planet has been successfully registered.'
     else
@@ -29,6 +28,13 @@ class PlanetsController < ApplicationController
 
   def myplanets
     @myplanetsmine = Planet.where(user: current_user)
+  end
+
+  def events
+    @planets = Planet.all
+  end
+
+  def chien
   end
 
   private

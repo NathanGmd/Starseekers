@@ -3,7 +3,7 @@
   <%= f.date_field :start_date  %>
   <%= f.label :end_date %>
   <%= f.date_field :end_date %>
-  <%= f.label :total_price %>
-  <%= f.text_field :total_price, readonly: true %>
+  <%= f.label "Daily price" %>
+  <%= f.text_field :total_price, readonly: true, value: "#{@planet.price_per_day} €" %>
   <%= f.submit %>
 <% end %>

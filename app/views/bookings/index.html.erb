@@ -9,7 +9,6 @@
         <% @bookings.each do |booking| %>
           <li class="booking" data-booking-id="<%= booking.id %>">
             <div class="booking-details">
-              <span class="booking-id"><%= booking.id %></span>
               <span class="booking-title">Email:</span>
               <span class="booking-user"> <strong><%= booking.user.email %></strong></span>
               <span class="booking-title">Start Date:</span>

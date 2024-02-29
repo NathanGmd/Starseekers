@@ -17,7 +17,7 @@ ActiveRecord::Schema[7.1].define(version: 2024_02_26_151447) do
   create_table "bookings", force: :cascade do |t|
     t.date "start_date"
     t.date "end_date"
-    t.float "total_price"
+    t.integer "total_price"
     t.bigint "user_id", null: false
     t.bigint "planet_id", null: false
     t.datetime "created_at", null: false
@@ -35,7 +35,16 @@ ActiveRecord::Schema[7.1].define(version: 2024_02_26_151447) do
   create_table "planets", force: :cascade do |t|
     t.string "name"
     t.text "content"
-    t.float "price_per_day"
+    t.text "rotation_period"
+    t.text "orbital_period"
+    t.text "diameter"
+    t.text "gravity"
+    t.text "terrain"
+    t.text "surface_water"
+    t.text "population"
+    t.text "climate"
+    t.string "image"
+    t.integer "price_per_day"
     t.bigint "user_id", null: false
     t.bigint "category_id", null: false
     t.bigint "solar_system_id", null: false

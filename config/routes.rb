@@ -9,6 +9,8 @@ Rails.application.routes.draw do
   resources :planets do
     resources :bookings, only: [:new, :create]
     get :myplanets, on: :collection
+    get :events, on: :collection
+    get :chien, on: :collection
   end
   resources :bookings, only: [:index, :destroy, :show]
   # Defines the root path route ("/")
