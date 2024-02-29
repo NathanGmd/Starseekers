@@ -25,7 +25,11 @@
               <% end %>
           </div>
       </div>
-      <div class="list-system"></div>
+      <div class="list-system">
+        <%= link_to new_planet_path do %>
+          <button id="thebutton">CREATE</button>
+        <% end %>
+      </div>
     </div>
     <div class="cards-container p-3">
     <% @planets.each do |planet| %>
