@@ -1,5 +1,5 @@
 class BookingsController < ApplicationController
-  before_action :set_planet, only: [:new, :create]
+  before_action :set_planet, only: %i[new create]
 
   def index
     @bookings = current_user.bookings
@@ -18,7 +18,7 @@ class BookingsController < ApplicationController
     @booking.planet = @planet
     @booking.user = current_user
     if @booking.save
-      redirect_to planet_path(@planet), notice: 'Your reservation has been successfully registered.'
+      redirect_to booking_path(@booking), notice: 'Your reservation has been successfully registered.'
     else
       render :new, status: :unprocessable_entity
     end
