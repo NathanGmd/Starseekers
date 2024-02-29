@@ -17,6 +17,7 @@ class BookingsController < ApplicationController
     @booking = Booking.new(booking_params)
     @booking.planet = @planet
     @booking.user = current_user
+    @booking.total_price = (@booking.end_date - @booking.start_date).to_i * @planet.price_per_day
     if @booking.save
       redirect_to booking_path(@booking), notice: 'Your reservation has been successfully registered.'
     else
