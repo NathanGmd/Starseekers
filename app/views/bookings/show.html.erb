@@ -1,2 +1,14 @@
-<h1>Bookings#show</h1>
-<p>Find me in app/views/bookings/show.html.erb</p>
+<div class="global-booking-show">
+  <div class="recap">
+    <h1>Your reservation</h1>
+    <p>User mail : <%= @booking.user.email %></p>
+    <p>Nom de la Planete : <%= @booking.planet.name %></p>
+    <p>reservation date : </p>
+    <p>From : <%= @booking.start_date %></p>
+    <p>To : <%= @booking.end_date %></p>
+    <p>Prix : price</p>
+    <%= link_to planets_path do %>
+    <button class="butt-recap">Back to Planets</button>
+    <% end %>
+  </div>
+</div>

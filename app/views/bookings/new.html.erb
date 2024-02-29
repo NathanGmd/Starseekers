@@ -1,29 +1,6 @@
-<%= form_with(model: @booking, url: planets_path) do |form| %>
-  <% if @booking.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@booking.errors.count, "error") %> prohibited this booking from being saved:</h2>
-
-      <ul>
-        <% @booking.errors.full_messages.each do |message| %>
-          <li><%= message %></li>
-        <% end %>
-      </ul>
-    </div>
-  <% end %>
-
-  <%= form.label :start_date %>
-  <%= form.date_field :start_date %>
-
-  <%= form.label :end_date %>
-  <%= form.date_field :end_date %>
-
-  <%= form.label :total_price %>
-  <%= form.text_field :total_price, readonly: true, value: "#{rand(100000..99999999)}€" %>
-
-  <%= form.hidden_field :user_id, value: current_user %>
-  <%= form.hidden_field :planet_id, value: @planet.id %>
-
-  <div class="actions">
-    <%= form.submit 'Create a new booking' %>
+<h1>New Booking</h1>
+<div class="bookform">
+  <div class="rend">
+    <%= render "form", model: @booking %>
   </div>
-<% end %>
+</div>
