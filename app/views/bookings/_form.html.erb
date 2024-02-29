@@ -1,0 +1,9 @@
+<%= form_with model: @booking, url: planet_bookings_path(@planet) do |f| %>
+  <%= f.label :start_date %>
+  <%= f.date_field :start_date  %>
+  <%= f.label :end_date %>
+  <%= f.date_field :end_date %>
+  <%= f.label :total_price %>
+  <%= f.text_field :total_price, readonly: true %>
+  <%= f.submit %>
+<% end %>
