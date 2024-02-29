@@ -11,10 +11,11 @@
 
 .global-booking-show {
   display: flex;
-  height: 80vh;
+  height: 92vh;
   width: 100%;
   align-items: center;
   justify-content: center;
+  background-color: rgb(196, 196, 196);
 }
 
 .recap {
@@ -23,6 +24,8 @@
   display: inline-block;
   position: relative;
   padding: 15px;
+  background-color: white;
+  box-shadow: 10px;
 }
 
 .butt-recap {
