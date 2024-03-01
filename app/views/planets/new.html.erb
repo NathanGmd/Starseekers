@@ -1,5 +1,5 @@
-<div>
-  <div class="col-6">
+<div class="container-fluid bg-dark text-white d-flex align-items-start justify-content-center bgimage minvh">
+  <div class="col-6 minmarj">
     <%= simple_form_for @planet, html: { class: "w-100" } do |f| %>
        <%= f.input :name, label: "Planet Name" %>
        <%= f.input :category_id, as: :select, collection: Category.all, label: "Category" %>
