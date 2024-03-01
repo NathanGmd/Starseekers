@@ -1,31 +1,31 @@
-.bookform {
-  display: flex;
-  width: 100%;
-  height: 80vh;
-  align-items: center;
-  justify-content: center;
-}
-.rend {
-  justify-content: center;
-}
-
 .global-booking-show {
   display: flex;
   height: 92vh;
   width: 100%;
   align-items: center;
   justify-content: center;
-  background-color: rgb(196, 196, 196);
+  background-image: url("background.jpeg");
+  background-size: cover;
+  background-position: center;
 }
 
 .recap {
-  border: 1px solid black;
-  border-radius: 25px;
   display: inline-block;
-  position: relative;
+  background-size: cover;
+  background-position: center;
+  height: 50%;
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+  align-items: baseline;
+  justify-content: space-around;
+  font-size: 15px;
+  color: white;
+  margin: 20px;
+  border-radius: 25px;
+  background: black;
+  border: 2px solid yellow;
+  overflow: hidden;
   padding: 15px;
-  background-color: white;
-  box-shadow: 10px;
+  position: relative;
 }
 
 .butt-recap {
