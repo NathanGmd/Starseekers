@@ -1,0 +1,75 @@
+.lightsaber .hilt {
+	cursor: pointer;
+	width: 150px;
+	height: 30px;
+	border-left: solid 4px grey;
+	border-right: solid 5px grey;
+	border-radius: 5px;
+	z-index: 4;
+	background: rgb(149, 148, 148);
+	background: linear-gradient(
+		to right,
+		rgb(170, 170, 170) 0%,
+		rgb(219, 219, 219) 50%,
+		rgb(209, 209, 209) 51%,
+		rgb(254, 254, 254) 100%
+	);
+
+	& > .switch {
+		background: #b94a37;
+		width: 10px;
+		height: 3px;
+		position: absolute;
+		bottom: 0px;
+		left: 15px;
+		border-radius: 10px;
+	}
+
+	&:hover + .plasma {
+    transform: scale(1, 1);
+	}
+
+  &:hover > .switch {
+		transform: scale(0.7, 1);
+	}
+
+}
+
+.lightsaber .plasma {
+	transition: transform 300ms;
+	border-radius: 0 12px 12px 0;
+	position: absolute;
+	bottom: 3px;
+	left: 147px;
+	width: 300px;
+	display: block;
+	transform: scaleX(0);
+  z-index: 3;
+	height: 25px;
+	transform-origin: bottom left;
+	filter: blur(1px);
+}
+
+.vader {
+	background: linear-gradient(
+		to right,
+		rgb(255, 0, 0) 0%,
+		rgb(255, 166, 12) 15%,
+    rgb(243, 255, 19) 35%,
+    rgb(79, 255, 20) 50%,
+		rgb(21, 255, 239) 66%,
+		rgb(61, 14, 202) 81%,
+		rgb(255, 18, 211) 100%
+	);
+	box-shadow: 0 0 10px #ffffff;
+}
+
+.lightsaber-example {
+	display: flex;
+  justify-content: baseline;
+  padding-top: 40px;
+}
+
+.lightsaber {
+	position: relative;
+}
