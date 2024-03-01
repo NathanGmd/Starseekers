@@ -34,10 +34,9 @@ class PlanetsController < ApplicationController
 
   def events
     @planets = Planet.all
+    @planettatooine
   end
 
-  def chien
-  end
 
   private
 

@@ -1,13 +1,16 @@
 .globalevent {
-  width: 100%;
   background-image: url("background.jpeg");
   background-size: cover;
+  background-position: center;
+  background-repeat: repeat;
+  width: 100%;
   color: yellow;
 }
 .apaevent {
   text-align: left; /* Alignement du texte à gauche */
   margin-left: 40px;
-  font-size: 50px;
+  font-size: 60px;
+  font-weight: bold;
 }
 
 .main-containerevent {
@@ -18,7 +21,6 @@
 
 .headerevent, .footer {
   text-align: center;
-  border-top: 1px solid yellow;
   padding: 10px 0;
 }
 
@@ -46,20 +48,27 @@
   display: flex;
   justify-content: flex-end;
   padding: 20px;
+  margin-top: 30px;
+  margin-right: 20px;
 }
 
 .buttonevent {
-  background-color: yellow;
-  color: black;
-  border: none;
+  background-color: black;
+  color: yellow;
+  border: 2.3px solid yellow;
   padding: 7px 15px;
   cursor: pointer;
   font-size: 22px;
   transition: 0.3s;
-  border-radius: 10px;
+  border-radius: 20px;
+  font-weight: bold;
 }
 
 .buttonevent:hover {
-  background-color: #ffc107;
+  background-color: yellow;
   color: white;
+}
+
+.tittleevent {
+  font-size: 25px;
 }

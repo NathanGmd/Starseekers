@@ -1,55 +1,124 @@
 <div class="globalevent">
-  <h1 class="apaevent">Events</h1> <!-- "Event" should be at the top only once -->
+  <h1 class="apaevent">In a galaxy far, far away......</h1> <!-- "Event" should be at the top only once -->
   <div class="main-containerevent">
     <div class="contentevent">
       <div class="cardeventleft">
-        <strong class="tittleevent">Article 1: The Mirage of Tatooine</strong>
+        <strong class="tittleevent">The Mirage of Tatooine</strong>
         <p>On the desert planet of Tatooine, known for its scorching days and freezing nights, an extraordinary phenomenon occurred. Travelers exhausted by the heat reported seeing an entire city emerge from the sand, with shimmering domes and towering spires. They approached, thinking they had found refuge, but the city dissipated before their eyes, leaving behind a barren expanse.</p>
         <p>The planet's elders say it is the spirit of the planet speaking, reminding inhabitants that even in the most inhospitable desert, hope and life can thrive. But this hope is as fleeting as the mirages that dance on the dunes. This event has spawned many legends and now attracts curious visitors from across the galaxy, hoping to catch a glimpse of this mysterious "City of Sands".</p>
       </div>
       <div class="cardeventright">
         <h1>Tatooine</h1>
-        <% link_to  %>
         <div class="button-containerevent">
-          <button class="buttonevent"><strong>Planet</strong></button>
+        <%= link_to planet_path(Planet.find_by(name: "Tatooine")) do %>
+          <button class="buttonevent"><strong>Booking</strong></button>
+        <% end %>
         </div>
       </div>
     </div>
-    <hr style="border-color: yellow;"> <!-- Yellow line above each article -->
-  </div>
 
 
-<div class="main-containerevent">
+
+  <h1 class="apaevent"></h1> <!-- "Event" should be at the top only once -->
+
     <div class="contentevent">
       <div class="cardeventleft">
-        <strong class="tittleevent">Article 1: The Mirage of Tatooine</strong>
-        <p>On the desert planet of Tatooine, known for its scorching days and freezing nights, an extraordinary phenomenon occurred. Travelers exhausted by the heat reported seeing an entire city emerge from the sand, with shimmering domes and towering spires. They approached, thinking they had found refuge, but the city dissipated before their eyes, leaving behind a barren expanse.</p>
+        <strong class="tittleevent">The Luminescent Nights of Naboo</strong>
+        <p>Naboo, a planet of unparalleled beauty, renowned for its picturesque landscapes and artistic cities, bore witness to an unprecedented celestial spectacle. For several consecutive nights, the sky illuminated with vibrant colors, akin to an aurora enveloping the entire atmosphere.</p>
         <p>The planet's elders say it is the spirit of the planet speaking, reminding inhabitants that even in the most inhospitable desert, hope and life can thrive. But this hope is as fleeting as the mirages that dance on the dunes. This event has spawned many legends and now attracts curious visitors from across the galaxy, hoping to catch a glimpse of this mysterious "City of Sands".</p>
       </div>
       <div class="cardeventright">
-        <h1>Tatooine</h1>
+        <h1>&nbsp;Naboo</h1>
         <div class="button-containerevent">
-          <button class="buttonevent"><strong>Planet</strong></button>
+        <%= link_to planet_path(Planet.find_by(name: "Naboo")) do %>
+          <button class="buttonevent"><strong>Booking</strong></button>
+        <% end %>
         </div>
       </div>
     </div>
-    <hr style="border-color: yellow;"> <!-- Yellow line above each article -->
-  </div>
 
-  <div class="main-containerevent">
+
+
+
+  <h1 class="apaevent"></h1> <!-- "Event" should be at the top only once -->
+
     <div class="contentevent">
       <div class="cardeventleft">
-        <strong class="tittleevent">Article 1: The Mirage of Tatooine</strong>
-        <p>On the desert planet of Tatooine, known for its scorching days and freezing nights, an extraordinary phenomenon occurred. Travelers exhausted by the heat reported seeing an entire city emerge from the sand, with shimmering domes and towering spires. They approached, thinking they had found refuge, but the city dissipated before their eyes, leaving behind a barren expanse.</p>
-        <p>The planet's elders say it is the spirit of the planet speaking, reminding inhabitants that even in the most inhospitable desert, hope and life can thrive. But this hope is as fleeting as the mirages that dance on the dunes. This event has spawned many legends and now attracts curious visitors from across the galaxy, hoping to catch a glimpse of this mysterious "City of Sands".</p>
+        <strong class="tittleevent">The Ice Song of Hoth</strong>
+        <p>Hoth, the icy planet often avoided for its harsh climate, was the stage for a unique sonic discovery. Explorers recorded melodic sounds emanating from deep ice canyons. These natural harmonies, produced by the wind rushing through the crevices, resembled a form of primitive music.</p>
+        <p>This event attracted researchers specialized in the study of planetary acoustic phenomena. They discovered that the ice formations act as instruments, amplifying the sounds of the wind to create a natural symphony. This "Song of Hoth" is now famous and attracts adventurous listeners eager to experience this natural concert, a reminder that even the most hostile environments can hide unsuspected wonders.</p>
       </div>
       <div class="cardeventright">
-        <h1>Tatooine</h1>
+        <h1>&nbsp;&nbsp;&nbsp;Hoth</h1>
         <div class="button-containerevent">
-          <button class="buttonevent"><strong>Planet</strong></button>
+        <%= link_to planet_path(Planet.find_by(name: "Hoth")) do %>
+          <button class="buttonevent"><strong>Booking</strong></button>
+        <% end %>
         </div>
       </div>
     </div>
-    <hr style="border-color: yellow;"> <!-- Yellow line above each article -->
+
+
+
+
+  <h1 class="apaevent"></h1> <!-- "Event" should be at the top only once -->
+
+    <div class="contentevent">
+      <div class="cardeventleft">
+        <strong class="tittleevent">The Vagues Lumineuses of Corellia</strong>
+        <p>Corellia, a world known for its shipyards and diverse population, witnessed a cosmic phenomenon as rare as it is enchanting. Just at twilight, when the stars begin to twinkle in the blue-black sky, waves of light began to surge through the atmosphere. These waves, reminiscent of auroras but much brighter and more dynamic, painted the sky with patterns that told the ancient history of the planet, from the first space explorers to the great naval battles.</p>
+        <p>Astronomers and historians came together to document and interpret these manifestations, some suggesting that Corellia's magnetic fields had captured echoes of light from these historical events. Although the scientific explanation still lacks evidence, the inhabitants of Corellia embraced these celestial visions as a reminder of their rich cultural and spatial heritage.</p>
+      </div>
+      <div class="cardeventright">
+        <h1>Corellia</h1>
+        <div class="button-containerevent">
+        <%= link_to planet_path(Planet.find_by(name: "Corellia")) do %>
+          <button class="buttonevent"><strong>Booking</strong></button>
+        <% end %>
+        </div>
+      </div>
+    </div>
+
+
+
+
+  <h1 class="apaevent"></h1> <!-- "Event" should be at the top only once -->
+
+    <div class="contentevent">
+      <div class="cardeventleft">
+        <strong class="tittleevent">The Dragon's Breath of Mustafar</strong>
+        <p>Mustafar, often described as an incarnate hell with its rivers of lava and sky obscured by ashes, surprised the entire scientific community. A new type of gas was discovered emanating from one of its many volcanic fissures. This gas, when it comes into contact with the cold air of the upper atmosphere, creates an exothermic reaction that resembles the fiery breath of a mythical dragon.</p>
+        <p>Researchers in exobiology and geochemistry have converged on Mustafar to study this phenomenon, which could well change our understanding of planetary chemistry. Meanwhile, local inhabitants have already woven legends around the "Dragon of Mustafar," some even daring to challenge it in ancestral acts of bravery.</p>
+      </div>
+      <div class="cardeventright">
+        <h1>Mustafar</h1>
+        <div class="button-containerevent">
+        <%= link_to planet_path(Planet.find_by(name: "Mustafar")) do %>
+          <button class="buttonevent"><strong>Booking</strong></button>
+        <% end %>
+        </div>
+      </div>
+    </div>
+
+
+
+
+  <h1 class="apaevent"></h1> <!-- "Event" should be at the top only once -->
+
+    <div class="contentevent">
+      <div class="cardeventleft">
+        <strong class="tittleevent">The Asteroid Ballet of Alderaan</strong>
+        <p>Alderaan, once an oasis of peace and natural beauty, is now a field of asteroids, a silent testament to a past tragedy. But recently, these orbital rocks have begun to align and move in complex patterns, as if they were performing a carefully choreographed dance.</p>
+        <p>Astronomers were astounded by these movements that defy all gravitational logic. Theories abound, from interference from unknown gravitational fields to the intervention of an ancient artificial intelligence seeking to convey a message. The descendants of Alderaan, scattered across the galaxy, prefer to see it as a sign of their lost world, a poignant farewell from the planet that was once their home.</p>
+      </div>
+      <div class="cardeventright">
+        <h1>Alderaan</h1>
+        <div class="button-containerevent">
+        <%= link_to planet_path(Planet.find_by(name: "Alderaan")) do %>
+          <button class="buttonevent"><strong>Booking</strong></button>
+        <% end %>
+        </div>
+      </div>
+    </div>
   </div>
 </div>

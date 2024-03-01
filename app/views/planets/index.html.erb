@@ -31,7 +31,7 @@
     <% @planets.each do |planet| %>
       <%= link_to planet_path(planet) do %>
       <div class="card">
-        <%# <div class="img-container" style="background-image: url(<%= image_path(planet.image) %>);"></div> %>
+        <div class="img-container" style="background-image: url(<%= image_path(planet.image) %>);"></div>
         <div class="text-planet">
           <h1><%= planet.name %></h1>
           <p></p>
