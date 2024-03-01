@@ -4,7 +4,16 @@
       <div class="sidebar">
         <% @categories.each do |category| %>
           <%= link_to planets_path(category: category.name) do %>
-            <div class="nav-link"><%= category.name %></div>
+            <div class="lightsaber-example">
+              <div class="lightsaber">
+                <div class="hilt">
+                <%= category.name %>
+                  <div class="switch"></div>
+                </div>
+                <div class="plasma vader"></div>
+              </div>
+            </div>
+
           <% end %>
         <% end %>
       </div>
@@ -12,13 +21,15 @@
   </div>
   <div class="container-right">
     <div class="header">
-      <div><%= params[:category] %></div>
+      <div id="knowing">
+        <div><strong><%= params[:category] %></strong></div>
+      </div>
       <div class="search1">
             <div class="">
               <%= form_with url: planets_path, method: :get, class: "" do %>
                 <%= text_field_tag :query,
                       params[:query],
-                      class: "form-control",
+                      class: "searchbar",
                       placeholder: "Solar systems...."
                   %>
                 <%# <%= submit_tag "Search", sname: "", class: "searchbar" %>
