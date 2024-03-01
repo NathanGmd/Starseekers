@@ -1,23 +1,40 @@
 .presentation {
-    font-family: Arial, sans-serif;
-    max-width: 100em;
-    margin: 0 auto;
+    text-align: center;
+    height: 92vh;
+    width: 100%;
+    background-image: url("background.jpeg");
+    background-size: contain;
   }
   
   .content {
-    margin-top: 20px;
-    height: calc(100vh - 100px);
-    overflow: hidden;
+    display: inline-block;
+    width: 80%;
+    margin: 0 60px;
   }
   
-  .title {
-    font-size: 24px;
-    margin-bottom: 10px;
+  .title-booking {
+    font-weight: bold;
+    font-size: 28px;
+    margin-bottom: 20px;
   }
   
   .scrollable-content {
-    height: calc(100% - 40px);
+    max-height: 500px;
+    min-height: 500px;
     overflow-y: auto;
+  }  
+  
+  .bookings {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .booking {
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   }
   
   .booking-details {
@@ -26,46 +43,32 @@
   
   .booking-title {
     font-weight: bold;
-    margin-right: 5px;
   }
   
-  .booking-id {
-    color: #ffffff;
+  .booking-user {
+    margin-right: 10px;
   }
   
-  .booking-planet {
-    color: #00aaff;
+  .booking-actions {
+    display: flex;
+    justify-content: center;
   }
   
   .actions {
     margin-top: 10px;
   }
   
-  .booking {
-    list-style-type: none;
-    border: 1px solid #ccc;
-    padding: 10px;
-    margin-bottom: 10px;
+  button {
+    background-color: #dc3545;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 8px 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
   }
   
-  .booking:hover {
-    background-color: #f9f9f9;
-  }
-  
-  .booking-user {
-    color: #333;
-  }
-  
-  .booking-start-date,
-  .booking-end-date {
-    margin-right: 10px;
-  }
-  
-  .centered {
-    text-align: center;
-  }
-  
-  .presentation h1:first-child {
-    text-align: center;
+  button:hover {
+    background-color: #c82333;
   }
   
