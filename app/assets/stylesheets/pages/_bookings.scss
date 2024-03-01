@@ -1,1 +1,71 @@
-
+.presentation {
+    font-family: Arial, sans-serif;
+    max-width: 100em;
+    margin: 0 auto;
+  }
+  
+  .content {
+    margin-top: 20px;
+    height: calc(100vh - 100px);
+    overflow: hidden;
+  }
+  
+  .title {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  
+  .scrollable-content {
+    height: calc(100% - 40px);
+    overflow-y: auto;
+  }
+  
+  .booking-details {
+    margin-bottom: 10px;
+  }
+  
+  .booking-title {
+    font-weight: bold;
+    margin-right: 5px;
+  }
+  
+  .booking-id {
+    color: #ffffff;
+  }
+  
+  .booking-planet {
+    color: #00aaff;
+  }
+  
+  .actions {
+    margin-top: 10px;
+  }
+  
+  .booking {
+    list-style-type: none;
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin-bottom: 10px;
+  }
+  
+  .booking:hover {
+    background-color: #f9f9f9;
+  }
+  
+  .booking-user {
+    color: #333;
+  }
+  
+  .booking-start-date,
+  .booking-end-date {
+    margin-right: 10px;
+  }
+  
+  .centered {
+    text-align: center;
+  }
+  
+  .presentation h1:first-child {
+    text-align: center;
+  }
+  
