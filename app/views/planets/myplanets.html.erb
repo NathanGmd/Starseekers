@@ -1,24 +1,15 @@
-<div class="globalmyplanets">
-    <div class="headermyplanets">
-      <h1 class="my-planets-title1">My Planets</h1>
-    </div>
-    <div class="cards-container p-3">
+<div class="globalmyplanet">
+    <h1 class="title-planetmyplanet text-center mb-4">My Planets</h1>
+  <div class="">
     <% @myplanetsmine.each do |planet| %>
       <%= link_to planet_path(planet) do %>
-      <div class="card">
-        <div class="img-container">
-        <%= image_tag("temperate",class: "img") %>
+        <div class="card">
+          <div class="img-container" style="background-image: url(<%= image_path(planet.image) %>);"></div>
+           <h1 class="title-planet"><%= planet.name %></h1>
+           <p class="text-planet"><%= planet.content %></p>
         </div>
-        <div class="text-planet">
-          <h1><%= planet.name %></h1>
         </div>
-      </div>
       <% end %>
     <% end %>
-    </div>
+  </div>
 </div>
-
-
-
-
-<%# <%= image_tag(["temperate","murky","arid","artic","humid","rocky","tropical"].sample,class: "img") %>
