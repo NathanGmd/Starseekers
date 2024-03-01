@@ -11,9 +11,8 @@ require 'json'
 require 'open-uri'
 require 'faker'
 
-Category.destroy_all
 SolarSystem.destroy_all
-Planet.destroy_all
+Category.destroy_all
 User.destroy_all
 
 Category.create(name: "Coup de Coeur")
