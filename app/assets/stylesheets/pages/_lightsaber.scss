@@ -39,7 +39,7 @@
 	transition: transform 300ms;
 	border-radius: 0 12px 12px 0;
 	position: absolute;
-	bottom: 2px;
+	bottom: 3px;
 	left: 147px;
 	width: 300px;
 	display: block;
@@ -53,11 +53,13 @@
 .vader {
 	background: linear-gradient(
 		to right,
-		rgb(12, 185, 26) 0%,
-		rgb(14, 202, 42) 30%,
-		rgb(254, 254, 254) 47%,
-		rgb(14, 202, 42) 71%,
-		rgb(12, 185, 26) 100%
+		rgb(255, 0, 0) 0%,
+		rgb(255, 166, 12) 15%,
+    rgb(243, 255, 19) 35%,
+    rgb(79, 255, 20) 50%,
+		rgb(21, 255, 239) 66%,
+		rgb(61, 14, 202) 81%,
+		rgb(255, 18, 211) 100%
 	);
 	box-shadow: 0 0 10px #ffffff;
 }
