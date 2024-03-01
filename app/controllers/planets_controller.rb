@@ -41,7 +41,11 @@ class PlanetsController < ApplicationController
   private
 
   def planet_params
-    params.require(:planet).permit(:name, :content, :price_per_day, :category_id, :solar_system_id)
+    params.require(:planet).permit(
+      :name, :content, :rotation_period, :orbital_period, :diameter, :gravity, :terrain,
+      :surface_water, :population, :climate, :image, :price_per_day, :user_id, :category_id,
+      :solar_system_id, :content
+    )
   end
 
 end

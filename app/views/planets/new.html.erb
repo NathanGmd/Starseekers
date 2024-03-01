@@ -1,13 +1,22 @@
-
 <div>
   <div class="col-6">
     <%= simple_form_for @planet, html: { class: "w-100" } do |f| %>
-      <%= f.input :name, label: "Planet Name" %>
-      <%= f.input :category_id, as: :select, collection: Category.all, label: "Category" %>
-      <%= f.input :solar_system_id, as: :select, collection: SolarSystem.all, label: "Solar System" %>
-      <%= f.input :content, label: "Content" %>
-      <%= f.input :price_per_day, input_html: { min: 9999, value: 1000000 }, label: "Price per Day" %>
-      <%= f.button :submit, "Create", class: "btn btn-primary btn-block" %>
-    <% end %>
+       <%= f.input :name, label: "Planet Name" %>
+       <%= f.input :category_id, as: :select, collection: Category.all, label: "Category" %>
+       <%= f.input :solar_system_id, as: :select, collection: SolarSystem.all, label: "Solar System" %>
+       <%= f.input :content, label: "Content", input_html: { value: "La Terre, notre planète bleue, est le troisième corps céleste en partant du Soleil et l'unique astre connu pour abriter la vie. Son environnement diversifié va des vastes océans qui couvrent environ 71% de sa surface, à des continents variés dotés de montagnes majestueuses, de déserts arides, de forêts denses, et de plaines fertiles. La Terre possède une atmosphère riche en oxygène qui protège la vie des rayonnements solaires nocifs et contribue à un climat propice au développement de la vie. Notre planète est dynamique, avec une activité tectonique qui façonne constamment le paysage. La Terre est non seulement notre foyer mais aussi un témoignage fascinant de l'histoire géologique et biologique." }, readonly: true %>
+       <%= f.input :price_per_day, input_html: { min: 9999, value: 1000000 }, label: "Price per Day" %>
+       <%= f.hidden_field :rotation_period, value: "24 hours" %>
+       <%= f.hidden_field :orbital_period, value: "365 days" %>
+       <%= f.hidden_field :diameter, value: "12742 km" %>
+       <%= f.hidden_field :gravity, value: "9.807 m/s²" %>
+       <%= f.hidden_field :terrain, value: "Deserts, mountains, plains, oceans" %>
+       <%= f.hidden_field :surface_water, value: "71%" %>
+       <%= f.hidden_field :population, value: "7.8 billion" %>
+       <%= f.hidden_field :climate, value: "Temperate, tropical, arctic, etc." %>
+       <%= f.hidden_field :user_id, value: "user_id" %>
+
+       <%= f.button :submit, "Create", class: "btn btn-primary btn-block" %>
+       <% end %>
   </div>
 </div>
